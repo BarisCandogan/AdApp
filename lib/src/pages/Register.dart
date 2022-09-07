@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project/src/pages/Home.dart';
+import 'package:project/src/pages/Bazaar.dart';
+import "package:project/src/pages/BottomNavigator.dart";
 
 class register extends StatefulWidget {
   const register({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class _registerState extends State<register> {
           child: Column(children: [createaccount(), buildCheckBox()]),
         ),
       ),
-      routes: {"/home": ((context) => homeDesign())},
+      routes: {"/home": ((context) => navigation())},
     );
   }
 
@@ -57,7 +58,7 @@ class _registerState extends State<register> {
                   Navigator.push(
                       context,
                       new MaterialPageRoute(
-                          builder: (context) => new homeDesign()));
+                          builder: (context) => new navigation()));
                 },
                 child: Text(
                   "REGISTER",
